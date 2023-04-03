@@ -5,11 +5,11 @@ import time
 import atexit
 import config
 
-mh[] = ?
+mh = []
 
 # create a default object, no changes to I2C address or frequency
 for i in range(config.I2C_BASEADDR, config.PUMPS_NUMHATS):
-    mh[i] = Adafruit_MotorHAT(addr=0x60, i)
+    mh[i] = Adafruit_MotorHAT(addr=0x60, busnum=i)
 
 # recommended for auto-disabling motors on shutdown!
 def turnOffMotors():
@@ -19,11 +19,11 @@ def turnOffMotors():
 atexit.register(turnOffMotors)
 
 def getHAT(pnum):
-    shield = config.PUMP(pnum)
+    shield = config.PUMP_CONFIG[pnum][config.PUMP_HAT]
     return mh[shield]
 
 def calcRunTime(pnum, volume):
-    rtime = volume/config.PUMP[pnum].MLPS
+    rtime = volume/config.PUMP_CONFIG[pnum][config.PUMP_MLPS]
     return rtime
 
 def stopPump(pnum):
@@ -33,7 +33,7 @@ def runPump(pnum, volume):
     myMotor = getHAT(pnum).getMotor(pnum)
 
     rtime = calcRunTime(pnum, volume)
-    myMotor.setSpeed(config.PUMP[pnum].FLOW_RATE)
+    myMotor.setSpeed(config.PUMP_CONFIG[pnum][config.PUMP_FLOW_RATE])
     myMotor.run(Adafruit_MotorHAT.FORWARD)
     time.sleep(rtime)
 
