@@ -8,5 +8,6 @@ Calibration is controlled via settings in the config.py file
 python3
 import pumpCtrl
 
-# runPump arguments pump number, volume in mL
-pumpCtrl.runPump(0, 100)
+runPump arguments pump number, volume in mL
+
+control.runPump(0, 100)
