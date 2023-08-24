@@ -10,7 +10,7 @@ mh = []
 # create a default object, no changes to I2C address or frequency
 for i in range(0, config.PUMPS_NUMHATS):
     haddr = 0x60 + i
-    newmh = Adafruit_MotorHAT(addr=haddr, busnum=config.I2C_BASEADDR)
+    newmh = Adafruit_MotorHAT(addr=haddr, i2c_bus=config.I2C_BASEADDR) #busnum
     mh.append(newmh)
 
 # recommended for auto-disabling motors on shutdown!
