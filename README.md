@@ -7,6 +7,9 @@ runPump arguments are pump number and volume in mL
 
 basic use:
 
+1. Open a command prompt window
+
+2. Type in the following:
 
 `python3`
 
