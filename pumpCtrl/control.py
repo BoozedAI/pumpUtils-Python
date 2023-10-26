@@ -29,7 +29,10 @@ def calcRunTime(pnum, volume):
     return rtime
 
 def stopPump(pnum):
-    getHAT(pnum).run(Adafruit_MotorHAT.RELEASE)
+    ndx = (pnum% 4)+1
+    myMotor = getHAT(pnum).getMotor(ndx)
+    
+    myMotor.run(Adafruit_MotorHAT.RELEASE)
 
 def runPump(pnum, volume):
     ndx = (pnum% 4)+1
