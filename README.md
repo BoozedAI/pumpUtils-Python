@@ -13,7 +13,7 @@ runPump arguments are pump number and volume in mL
 
 ### Install dependencies
 
-`sudo pip3 install adafruit-circuitpython-motorkit --break-system-packages`
+`pip3 install adafruit-circuitpython-motorkit --break-system-packages`
 
 ### Install pumpUtils
 
