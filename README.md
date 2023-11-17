@@ -8,11 +8,11 @@ runPump arguments are pump number and volume in mL
 
 ## installation
 
-git clone https://github.com/ionlabhouston/pumpUtils-Python.git
+`git clone https://github.com/ionlabhouston/pumpUtils-Python.git`
 
-cd pumpUtils-Python
+`cd pumpUtils-Python`
 
-python3 setup.py
+`python3 setup.py`
 
 
 ## basic use
