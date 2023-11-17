@@ -8,6 +8,15 @@ runPump arguments are pump number and volume in mL
 
 ## Installation
 
+### Raspberry PI Prep
+1. Enable i2C in raspi-config
+
+### Install dependencies
+
+`sudo pip3 install adafruit-circuitpython-motorkit --break-system-packages`
+
+### Install pumpUtils
+
 `git clone https://github.com/ionlabhouston/pumpUtils-Python.git`
 
 `cd pumpUtils-Python`
