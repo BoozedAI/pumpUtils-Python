@@ -11,6 +11,7 @@ git clone https://github.com/ionlabhouston/pumpUtils-Python.git
 
 cd pumpUtils-Python
 
+python3 setup.py
 
 basic use:
 
