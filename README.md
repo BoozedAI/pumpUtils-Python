@@ -5,6 +5,13 @@ Calibration is controlled via settings in the config.py file
 
 runPump arguments are pump number and volume in mL
 
+installation:
+
+git clone https://github.com/ionlabhouston/pumpUtils-Python.git
+
+cd pumpUtils-Python
+
+
 basic use:
 
 1. Open a command prompt window
