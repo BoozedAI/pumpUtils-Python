@@ -24,7 +24,7 @@ runPump arguments are pump number and volume in mL
 ### Install dependencies
 `pip3 install adafruit-motor-hat`
 
-## Install pumpUtils
+### Install pumpUtils
 `cd pumpUtils-Python`
 
 `python3 setup.py`
